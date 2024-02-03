@@ -1,6 +1,7 @@
 name : creation
 on: 
-  create: repository
+  push:
+    branches: main
 permissions:
   contents: read
   issues: write 
