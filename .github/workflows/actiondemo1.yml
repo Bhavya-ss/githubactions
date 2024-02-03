@@ -1,0 +1,32 @@
+name : Issue creation
+on: 
+  push:
+    branches: main 
+    paths-ignore: [.github/**]
+  pull_request:
+    branches: main
+  schedule:
+    - cron: '15 6 * * 0 ' 
+  workflow_dispatch:
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "event name: ${{ github.event_name }}"
+          echo "branch name ${{ github.ref }} and repository is ."
+
+      - uses: actions/checkout@v3.3.0
+
+      - name: List all the fiels in repository
+        run: |
+          echo "The repository ${{ github.repository }} files:"
+          tree
+          
+            
+          
+  
+  
+  
+
+    
