@@ -12,9 +12,9 @@ jobs:
      - uses: actions/checkout@v3
      - uses: Bhavya-ss/create-an-issue@v2
        env:
-          GITHUB_TOKEN: ${{ secrets.Issue creation }}
+          GITHUB_TOKEN: ${{ secrets.Token }}
        with:
-          assignees: JasonEtco, octocat
+          assignees: Bhavya-ss, sahana-un
           milestone: 1
           update_existing: true
           search_existing: all
