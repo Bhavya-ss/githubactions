@@ -1,0 +1,23 @@
+name : creation
+on: 
+  create: repository
+permissions:
+  contents: read
+  issues: write 
+jobs:
+  Builds :
+    runs-on: ubuntu-latest
+    steps:
+     - uses: actions/checkout@v3
+     - uses: Bhavya-ss/create-an-issue@v2
+       env:
+          GITHUB_TOKEN: ${{ secrets.Issue creation }}
+       with:
+          assignees: JasonEtco, octocat
+          milestone: 1
+          update_existing: true
+          search_existing: all
+      
+      
+          
+  
